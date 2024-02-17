@@ -7,6 +7,8 @@ class TutorialCategory(models.Model):
     tutorial_category = models.CharField(max_length=200)
     category_summary = models.CharField(max_length=200)
     category_slug = models.CharField(max_length=200, default=1)
+    category_image = models.ImageField(
+        upload_to='category_images/', null=True, blank=True)  # Added image field
 
     class Meta:
         # Gives the proper plural name for admin
