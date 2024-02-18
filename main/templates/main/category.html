@@ -1,20 +1,52 @@
 {% extends 'main/header.html' %}
 
 {% block content %}
+{% load static %} <!-- Add this line at the beginning to load static tag -->
 
 <div class="row">
+    <div class="col s12 m8">
+        <h2>Welcome to NetScapeService</h2>
+        <h4>Free E-learning Platform</h4>
+        <p>NetScapeService IT offers a cutting-edge Free E-learning Platform providing high-quality, up-to-date
+            content on
+            the latest technologies. Our platform emphasizes comprehensive explanations and practical examples to
+            enhance
+            your learning experience.</p>
+        <h5>IT Consultancy Services</h5>
+        <p>Explore our IT Consultancy Services tailored to meet your business needs:</p>
+        <ul>
+            <li>👉 Website Development 👈</li>
+            <li>👉 App Development 👈</li>
+            <li>👉 Blockchain Solutions 👈</li>
+            <li>👉 Startup Tech Assistance 👈</li>
+            <li>👉 Technical Consultancy Collaborations 👈</li>
+            <li>👉 AI App Development 👈</li>
+            <li>👉 AI Chat Application Development 👈</li>
+        </ul>
+    </div>
     {% for tut, partone in part_ones.items %}
 
     <div class="col s12 m6 l4">
-        <a href="{{partone}}" , style="color:#000">
-            <div class="card hoverable">
+        <a href="{{partone}}" style="color:#000">
+            <div class="card small hoverable">
+                <div class="card-image">
+                    <img src="{% static '../media/main/category_images/netscapeservice.webp' %}" alt="Golang Image">
+                </div>
                 <div class="card-content">
-                    <div class="card-title">{{tut.tutorial_series}}</div>
-                    <!--<p style="font-size:70%">Published {{tut.tutorial_published}}</p>-->
+                    <span class="card-title">{{tut.tutorial_series}}</span>
                     <p>{{tut.series_summary}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="{{partone}}">Read More</a>
                 </div>
             </div>
         </a>
+        <h6>👉 Contact-: IT NetScapeService</h6>
+        <h6>👉 Email-: webt2084@gmail.com</h6>
+        <h6>👉 What's App -: +91-8533814113</h6>
+    </div>
+    <div class="col s12 m6 l4">
+
     </div>
     {% endfor %}
 </div>
