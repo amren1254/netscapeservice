@@ -5,7 +5,8 @@ from django.contrib.auth import logout, authenticate, login
 from django.contrib import messages
 from .forms import NewUserForm
 from django.http import HttpResponse
-
+import os
+from django.conf import settings
 # Create your views here.
 
 
@@ -13,6 +14,16 @@ from django.http import HttpResponse
 #     return render(request=request,
 #                   template_name='main/home.html',
 #                   context={"tutorials": Tutorial.objects.all})
+def sitemap(request):
+    sitemap_path = os.path.join(settings.BASE_DIR, 'sitemap.xml')
+    print("***")
+    print(sitemap_path)
+
+    print("***")
+
+    with open(sitemap_path, 'r') as file:
+        sitemap_xml = file.read()
+    return HttpResponse(sitemap_xml, content_type="application/xml")
 
 
 def homepage(request):
