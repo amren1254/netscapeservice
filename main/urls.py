@@ -17,6 +17,10 @@ urlpatterns = [
     path("login", views.login_request, name="login"),
     path("<single_slug>", views.single_slug, name="single_slug"),
     path("sitemap.xml/", views.sitemap, name="sitemap"),
+    # path("ads.txt/", views.ads_txt, name="ads_txt"),
+    path("ads.txt/", views.ads_txt_view, name="ads_txt_view"),
+
+
 
 
 ]

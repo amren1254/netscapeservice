@@ -25,7 +25,7 @@ SECRET_KEY = '0v76p+*8j9xj+sp1=f-hpky48c+i&k@sg818h+bp_xb31-!c=u'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
     'width': 1120,
@@ -67,6 +67,8 @@ INSTALLED_APPS = [
     'main.apps.MainConfig',
     'django.contrib.sitemaps',
     'tinymce',
+    "django_extensions",
+
 ]
 SITE_ID = 1
 

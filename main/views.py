@@ -26,6 +26,19 @@ def sitemap(request):
     return HttpResponse(sitemap_xml, content_type="application/xml")
 
 
+def ads_txt_view(request):
+    ads_txt_path = os.path.join(settings.BASE_DIR, 'ads.txt')
+    print(ads_txt_path)
+
+    if os.path.isfile(ads_txt_path):
+        with open(ads_txt_path, 'r') as file:
+            file_content = file.read()
+            print("File Content:", repr(file_content))  # Print the content
+            return HttpResponse(file_content, content_type="text/plain")
+    else:
+        return HttpResponse("File not found", status=404)
+
+
 def homepage(request):
     return render(request=request,
                   template_name='main/categories.html',
