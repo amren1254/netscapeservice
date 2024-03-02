@@ -3,7 +3,7 @@
 # Script to transfer a zip file to a specific directory on a remote server using scp
 
 # Local file path
-local_file="/home/anuj/anuj/mysite.zip"
+local_file="/home/anuj/anuj/mysite/file.zip"
 
 # Remote server details
 remote_user="root"

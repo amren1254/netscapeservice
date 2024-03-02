@@ -1,6 +1,6 @@
 asgiref==3.7.2
 dj-database-url==2.1.0
-Django==5.0.2
+Django==2.1.4
 django-extensions==3.2.3
 django-tinymce==3.7.1
 gunicorn==21.2.0
