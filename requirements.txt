@@ -1,8 +1,11 @@
+Django == 2.1.4
 asgiref==3.7.2
-Django==5.0.2
-django-extensions==3.2.3
-django-tinymce==3.7.1
+django-tinymce4-lite==1.8.0
 gunicorn==21.2.0
+jsmin==3.0.1
 packaging==23.2
+pillow==10.2.0
+pytz==2024.1
 sqlparse==0.4.4
 typing_extensions==4.10.0
+django-extensions== 2.1.4
