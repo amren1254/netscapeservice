@@ -14,7 +14,6 @@ from django.conf import settings
 #     return render(request=request,
 #                   template_name='main/home.html',
 #                   context={"tutorials": Tutorial.objects.all})
-
 def sitemap(request):
     sitemap_path = os.path.join(settings.BASE_DIR, 'sitemap.xml')
     print("***")
@@ -25,6 +24,20 @@ def sitemap(request):
     with open(sitemap_path, 'r') as file:
         sitemap_xml = file.read()
     return HttpResponse(sitemap_xml, content_type="application/xml")
+
+
+def ads_txt_view(request):
+    ads_txt_path = os.path.join(settings.BASE_DIR, 'ads.txt')
+    print(ads_txt_path)
+
+    if os.path.isfile(ads_txt_path):
+        with open(ads_txt_path, 'r') as file:
+            file_content = file.read()
+            print("File Content:", repr(file_content))  # Print the content
+            return HttpResponse(file_content, content_type="text/plain")
+    else:
+        return HttpResponse("File not found", status=404)
+
 
 def homepage(request):
     return render(request=request,

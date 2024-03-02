@@ -23,10 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '0v76p+*8j9xj+sp1=f-hpky48c+i&k@sg818h+bp_xb31-!c=u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-ALLOWED_HOSTS = ['127.0.0.1', '0.0.0.0',
-                 '139.59.233.59', 'www.netscapeservice.com']
+DEBUG = True
 
+ALLOWED_HOSTS = ['*']
 TINYMCE_DEFAULT_CONFIG = {
     'height': 360,
     'width': 1120,
@@ -66,10 +65,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'main.apps.MainConfig',
+    'django.contrib.sitemaps',
     'tinymce',
-    'sslserver',
-    'django_extensions',
+    "django_extensions",
+
 ]
+SITE_ID = 1
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -155,4 +157,3 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_URL = '/media/'
-# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
