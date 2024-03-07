@@ -26,13 +26,12 @@ SECRET_KEY = '0v76p+*8j9xj+sp1=f-hpky48c+i&k@sg818h+bp_xb31-!c=u'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']
+
 TINYMCE_DEFAULT_CONFIG = {
-    'height': 360,
-    'width': 1120,
     'cleanup_on_startup': True,
     'custom_undo_redo_levels': 20,
     'selector': 'textarea',
-    'theme': 'modern',
+    'theme': 'silver',
     'plugins': '''
             textcolor save link image media preview codesample contextmenu
             table code lists fullscreen  insertdatetime  nonbreaking
@@ -55,6 +54,35 @@ TINYMCE_DEFAULT_CONFIG = {
     'statusbar': True,
 }
 
+# TINYMCE_DEFAULT_CONFIG = {
+#     'height': 360,
+#     'width': 1120,
+#     'cleanup_on_startup': True,
+#     'custom_undo_redo_levels': 20,
+#     'selector': 'textarea',
+#     'theme': 'modern',
+#     'plugins': '''
+#             textcolor save link image media preview codesample contextmenu
+#             table code lists fullscreen  insertdatetime  nonbreaking
+#             contextmenu directionality searchreplace wordcount visualblocks
+#             visualchars code fullscreen autolink lists  charmap print  hr
+#             anchor pagebreak
+#             ''',
+#     'toolbar1': '''
+#             fullscreen preview bold italic underline | fontselect,
+#             fontsizeselect  | forecolor backcolor | alignleft alignright |
+#             aligncenter alignjustify | indent outdent | bullist numlist table |
+#             | link image media | codesample |
+#             ''',
+#     'toolbar2': '''
+#             visualblocks visualchars |
+#             charmap hr pagebreak nonbreaking anchor |  code |
+#             ''',
+#     'contextmenu': 'formats | link image',
+#     'menubar': True,
+#     'statusbar': True,
+# }
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -68,7 +96,6 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'tinymce',
     "django_extensions",
-
 ]
 SITE_ID = 1
 
