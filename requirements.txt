@@ -1,11 +1,10 @@
 asgiref
+dj-database-url
 Django
 django-extensions
 django-tinymce
 gunicorn
-jsmin
 packaging
 psycopg2-binary
-pytz
 sqlparse
 typing_extensions
